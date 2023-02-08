@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>user-prefs</title>
+		<link rel="stylesheet" href="css/user-prefs.css" />
+	</head>
+	<body onload="onInit()">
+		<h1>Please choose your prefernces</h1>
+		<form onsubmit="onSavePref(event)">
+			<label for="first-name"> First Name </label>
+			<input id="first-name" required />
+
+			<label for="bg-color"> Background Color </label>
+			<input id="bg-color" value="#ffffff" type="color" />
+
+			<label for="txt-color"> Text Color </label>
+			<input id="txt-color" type="color" />
+
+			<label for="zoom-factor"> Zoom Factor </label>
+			<input id="zoom-factor" type="range" min="1" max="21" step="1" />
+
+			<label for="map-start-location"> Map Start Location </label>
+			<input id="map-start-location" />
+
+			<button>save changes</button> <button type="button" onclick="onGoBack()">back to home page</button>
+		</form>
+
+		<dialog>
+			<h1>Your preferences save successfully</h1>
+			<div class="dialog-btn-container"><button onclick="onShowDialog(false)">close</button> <button onclick="onGoBack()">done here, go back</button></div>
+		</dialog>
+
+		<script src="/js/services/storage.service.js"></script>
+		<script src="/js/user-prefs.controller.js"></script>
+	</body>
+</html>

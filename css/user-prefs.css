@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	font-family: Calibri, Helvetica, sans-serif;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+
+	margin: auto;
+	width: min(100%, 70vh);
+}
+
+form button {
+	place-self: center;
+	width: min(40%, 20em);
+}
+
+input {
+	width: auto;
+}
+
+h1 {
+	text-align: center;
+}
